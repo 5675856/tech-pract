@@ -152,7 +152,7 @@ def prodcomfiltsort():
             tu=()
             tu=idprod+(int(prodcombfilt.get()),)
             liprodcom, idprodcom=sql.prodcomp_filt(tu)
-        if prodcombfilt.get()=="Все":
+        elif prodcombfilt.get()=="Все":
             liprodcom, idprodcom =sql.prod_comp(idprod)
     prodcomlist.destroy()
     comdata=Variable(value=liprodcom)
@@ -313,7 +313,7 @@ def modcomfiltsort():
             tu=()
             tu=idmod+(int(modcombfilt.get()),)
             limodcom, idlimodcom=sql.modcomp_filt(tu)
-        if modcombfilt.get()=="Все":
+        elif modcombfilt.get()=="Все":
             limodcom, idlimodcom =sql.mod_comp(idmod)
     modcomlist.destroy()
     comdata=Variable(value=limodcom)
